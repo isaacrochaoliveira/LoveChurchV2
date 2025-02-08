@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/* Imagem */
+.img-user-form {
+    width: 160px;
+    border-radius: 100%;
+}
+
 .fontsize-icon30pt {
     font-size: 30pt;
 }
