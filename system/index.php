@@ -1,6 +1,7 @@
 <?php
 $pag = "index";
 @include_once('../config/config.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,26 +18,60 @@ $pag = "index";
     ?>
     <div class="bg-dark">
         <div class="container py-5">
-            <form action="<?php $url_base ?>autenticar.php" method="post" class="w-25">
+            <form class="w-25">
                 <div class="text-center">
                     <img src="imagens/man-157699_640.png" class="img-user-form" alt="">
                 </div>
                 <div class="mx-auto">
                     <div class="my-3">
-                        <label for="email">E-mail:</label>
-                        <input type="email" name="email" id="email" class="form-control">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
                     </div>
                     <div class="my-3">
-                        <label for="senha">Senha:</label>
-                        <input type="password" name="senha" id="senha" class="form-control">
+                        <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha">
                     </div>
                     <div class="mt-3">
-                        <button class="btn btn-primary">Entrar</button>
+                        <button class="btn btn-primary" id="entrar">Entrar</button>
+                    </div>
+                    <div>
+                        <div class="alert" role="alert">
+                            
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+        $url = "<?= $url_base ?>";
+        $('#entrar').click(function(event) {
+            event.preventDefault();
+            var email = $('#email').val();
+            var senha = $('#senha').val();
+            $.ajax({
+                url: 'autenticar.php',
+                method: 'post',
+                data: {
+                    email,
+                    senha
+                },
+                dataType: 'html',
+                success: function(resp) {
+                    $('.alert').removeClass();
+                    if (resp == 'Validado!') {
+                        $('.alert').addClass('alert-success');
+                        $('.alert').append(resp);
+
+                        location.href = $url + 'system/painel';
+                   } else {
+                        $('.alert').addClass('alert-danger');
+                        $('.alert').append(resp);
+                   }
+                }
+            })
+        })
+    });
+</script>
 
 </html>

@@ -1,5 +1,5 @@
+<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <?php 
-
 $url_base = "http://localhost/projects/LoveChurchV2/";
 $nome_fantasia = "LoveChurch";
 $version = 'Isaac Rocha | v2.0';
