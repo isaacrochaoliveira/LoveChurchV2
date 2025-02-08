@@ -33,7 +33,7 @@ $pag = "index";
                         <button class="btn btn-primary" id="entrar">Entrar</button>
                     </div>
                     <div>
-                        <div class="alert" role="alert">
+                        <div class="alert" id="msg" role="alert">
                             
                         </div>
                     </div>
@@ -44,7 +44,7 @@ $pag = "index";
 </body>
 <script>
     $(document).ready(function() {
-        $url = "<?= $url_base ?>";
+        url = "<?= $url_base ?>";
         $('#entrar').click(function(event) {
             event.preventDefault();
             var email = $('#email').val();
@@ -58,15 +58,16 @@ $pag = "index";
                 },
                 dataType: 'html',
                 success: function(resp) {
-                    $('.alert').removeClass();
+                    $('#msg').removeClass();
                     if (resp == 'Validado!') {
-                        $('.alert').addClass('alert-success');
-                        $('.alert').append(resp);
+                        console.log(resp);
+                        $('#msg').addClass('alert alert-success');
+                        $('#msg').append(resp);
 
-                        location.href = $url + 'system/painel';
+                        window.location = url + 'system/painel/index.php';
                    } else {
-                        $('.alert').addClass('alert-danger');
-                        $('.alert').append(resp);
+                        $('#msg').addClass('alert alert-danger');
+                        $('#msg').append(resp);
                    }
                 }
             })
