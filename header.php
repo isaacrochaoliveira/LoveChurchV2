@@ -20,47 +20,29 @@
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <a href="<?=$url_base?>" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                        <i class="fa-solid fa-book-bible fort-icon40pt"></i>
+                       <img src="<?php echo $url_base?>/system/imagens/logo/horizontal-logo.png" width="250" alt="">
                     </a>
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
-                            <a href="<?php echo $url_base ?>/system/index.php" class="nav-link text-white text-center">
-                                <i class="fa-solid fa-database fort-icon30pt"></i>
+                            <a href="<?php echo $url_base ?>" class="nav-link text-white text-center">
+                                <i class="fa-solid fa-house fort-icon20pt"></i>
                                 <div>
-                                    LoveChurch
+                                    Home
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo $url_base ?>" class="nav-link text-white text-center">
-                                <i class="fa-solid fa-house fort-icon30pt"></i>
+                                <i class="fa-solid fa-person-shelter fort-icon20pt"></i>
                                 <div>
-                                    Home
+                                    Pessoas
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <?php 
-            if ($pag == 'index') {
-                ?>
-                    <div class="px-3 py-2 border-bottom mb-3">
-                        <div class="container d-flex flex-wrap justify-content-center">
-                            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                            </form>
-
-                            <div class="text-end">
-                                <button type="button" class="btn btn-danger text-white text-dark me-2">Sair</button>
-                                <button type="button" class="btn btn-light">Cadastre-se</button>
-                            </div>
-                        </div>
-                <?php   
-            }
-        ?>
         </div>
     </header>
 </body>

@@ -3,7 +3,10 @@
 /* Imagem */
 .img-user-form {
     width: 160px;
-    border-radius: 100%;
+}
+
+.fort-icon20pt {
+    font-size: 20pt;
 }
 
 .fort-icon30pt {
@@ -15,5 +18,5 @@
 }
 
 #cabecalho {
-    background-color: #1d6fc2ff;
+    background-color: rgb(0, 0, 0);
 }
