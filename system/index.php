@@ -44,35 +44,23 @@ $pag = "index";
 </body>
 <script>
     $(document).ready(function() {
-        url = "<?= $url_base ?>";
         $('#entrar').click(function(event) {
-            event.preventDefault();
-            var email = $('#email').val();
-            var senha = $('#senha').val();
+            email = $("#email").val();
+            senha = $('#senha').val();
             $.ajax({
                 url: 'autenticar.php',
                 method: 'post',
-                data: {
-                    email,
-                    senha
-                },
-                dataType: 'html',
+                data: {email, senha},
                 success: function(resp) {
-                    $('#msg').removeClass();
-                    if (resp == 'Validado!') {
-                        console.log(resp);
-                        $('#msg').addClass('alert alert-success');
-                        $('#msg').append(resp);
-
-                        window.location = url + 'system/painel/index.php';
-                   } else {
-                        $('#msg').addClass('alert alert-danger');
-                        $('#msg').append(resp);
-                   }
+                    if (resp.trim() == 'Validado!') {
+                        window.location = 'painel';
+                    } else {
+                        alert('oi');
+                    }
                 }
             })
         })
-    });
+    })
 </script>
 
 </html>

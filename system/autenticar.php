@@ -4,6 +4,8 @@
 
 include_once('../config/config.php');
 
+echo 
+
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
@@ -14,7 +16,6 @@ if (count($res) > 0) {
         if (!(@$_SESSION['id'])) {
             @session_start();
         }
-
         $_SESSION['id'] = $res[0]['id_login'];
 
         echo "Validado!";
