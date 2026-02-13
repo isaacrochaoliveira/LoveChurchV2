@@ -6,6 +6,14 @@
     border-radius: 100%;
 }
 
-.fontsize-icon30pt {
+.fort-icon30pt {
     font-size: 30pt;
+}
+
+.fort-icon40pt {
+    font-size: 40pt;
+}
+
+#cabecalho {
+    background-color: #1d6fc2ff;
 }

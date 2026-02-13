@@ -16,19 +16,17 @@
 
 <body>
     <header>
-        <div class="px-3 py-2 text-bg-dark border-bottom">
+        <div class="px-3 py-4 border-bottom" id="cabecalho">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                            <use xlink:href="#bootstrap" />
-                        </svg>
+                    <a href="<?=$url_base?>" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <i class="fa-solid fa-book-bible fort-icon40pt"></i>
                     </a>
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
                             <a href="<?php echo $url_base ?>/system/index.php" class="nav-link text-white text-center">
-                                <i class="fa-solid fa-database fontsize-icon30pt"></i>
+                                <i class="fa-solid fa-database fort-icon30pt"></i>
                                 <div>
                                     LoveChurch
                                 </div>
@@ -36,7 +34,7 @@
                         </li>
                         <li>
                             <a href="<?php echo $url_base ?>" class="nav-link text-white text-center">
-                                <i class="fa-solid fa-house fontsize-icon30pt"></i>
+                                <i class="fa-solid fa-house fort-icon30pt"></i>
                                 <div>
                                     Home
                                 </div>
