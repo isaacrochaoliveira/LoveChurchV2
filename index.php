@@ -56,6 +56,7 @@
 <script>
     $(document).ready(function() {
         $('#entrar').click(function(event) {
+            event.preventDefault();
             email = $("#email").val();
             senha = $('#senha').val();
             $.ajax({
@@ -66,11 +67,9 @@
                     senha
                 },
                 success: function(resp) {
-                    if (resp.trim() == 'Validado!') {
-                        window.location = 'painel';
-                    } else {
-                        alert('oi');
-                    }
+                    setTimeout(() => {
+                        window.location.href = 'system/painel/';
+                    }, 2000);
                 }
             })
         })
