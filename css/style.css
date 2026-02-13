@@ -1,8 +1,18 @@
 @charset "UTF-8";
 
-/* Imagem */
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(241, 241, 241);
+}
+
 .img-user-form {
-    width: 160px;
+    width: 200px;
 }
 
 .fort-icon20pt {
@@ -19,4 +29,32 @@
 
 #cabecalho {
     background-color: rgb(0, 0, 0);
+}
+
+.formulario-admin {
+    background-color: #ffffff;
+    width: 600px;
+    padding: 30px 80px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    box-shadow: 0 0 40px #000000;
+}
+
+.btn-logar {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input.leitura:focus {
+    outline: none;
+}
+
+input.leitura {
+    width: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 17px;
 }
