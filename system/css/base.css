@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.semanal {
+    padding: 20px;
+}
+
+.semanal .header_programacao {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.semanal .header_programacao h2 {
+    text-transform: capitalize;
+    font-size: 43px;
+}
+
+.semanal .diviser {
+    margin: 10px 0px;
+    width: 150px;
+    border: 2px dashed black;
+}
+
+.semanal .call p.ebd_p2 {
+    display: none;
+}
+
+.semanal .card {
+    transition: 5s;
+}
+
+.semanal .card:hover .call p.ebd_p2 {
+    display: block;
+}
+
+.semanal .card:hover .call p.ebd_p1 {
+    display: none;
+}
