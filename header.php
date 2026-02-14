@@ -1,9 +1,10 @@
 <?php
-    @include_once('config/config.php')
+@session_start();
+@include_once('config/config.php');
+$pag = "";
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,11 +17,39 @@
 
 <body>
     <header>
-        <div class="px-3 py-4 border-bottom" id="cabecalho">
+        <?php 
+            if ($_SESSION['id']) {
+                ?>
+
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.php?pag=logout">Sair</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                <?php
+            }
+        ?>
+        <div class="px-3 py-4" id="cabecalho">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="<?=$url_base?>" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                       <img src="<?php echo $url_base?>/system/imagens/logo/horizontal-logo.png" width="250" alt="">
+                    <a href="<?= $url_base ?>" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img src="<?php echo $url_base ?>/system/imagens/logo/horizontal-logo.png" width="250" alt="">
                     </a>
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">

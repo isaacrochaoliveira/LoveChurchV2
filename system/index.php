@@ -1,7 +1,7 @@
 <?php
-$pag = "index";
 @include_once('../config/config.php');
 @include_once('security/protect.php');
+$pag = isset($_GET['pag']) ? $_GET['pag'] : "";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,9 +22,15 @@ $pag = "index";
 
 <body>
     <?php
-    @include_once('../header.php');
+    // Cabeçalho
+    include_once('../header.php');
+    // Puxar Páginas
+    switch ($pag) {
+        case "":
+            include('painel/home.php');
+            break;
+    }
     ?>
-
 </body>
 
 </html>
