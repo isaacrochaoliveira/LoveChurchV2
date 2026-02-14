@@ -1,6 +1,6 @@
 <?php 
 @session_start();
-if ($_SESSION['id']) {
+if (@$_SESSION['id']) {
     session_destroy();
 }
 @session_start();
@@ -19,9 +19,7 @@ if (count($res) > 0) {
             @session_start();
             $_SESSION['id'] = $res[0]['id_login'];
             echo "Logado com Sucesso!";
-        } else {
-            echo "Já existe uma sessão ativa!";
-        }
+        } 
     } else {
         echo "Senha e/ou Email Incorretos";
     }
