@@ -29,6 +29,9 @@ $pag = isset($_GET['pag']) ? $_GET['pag'] : "";
         case "":
             include('painel/home.php');
             break;
+        case "logout":
+            include('security/sair.php');
+            break;
     }
     ?>
 </body>

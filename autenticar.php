@@ -18,6 +18,7 @@ if (count($res) > 0) {
         if (!(@$_SESSION['id'])) {
             @session_start();
             $_SESSION['id'] = $res[0]['id_login'];
+            $_SESSION['pessoa'] = $res[0]['nome_login'];
             echo "Logado com Sucesso!";
         } 
     } else {

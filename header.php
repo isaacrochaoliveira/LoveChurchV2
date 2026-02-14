@@ -21,22 +21,22 @@ $pag = "";
             if ($_SESSION['id']) {
                 ?>
 
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <nav class="navbar navbar-expand-lg" id="navbar">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#">Navbar</a>
+                            <a class="navbar-brand text-white" href="#"><strong><?php echo $_SESSION['pessoa'] ?></strong></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        <a class="nav-link text-white" aria-current="page" href="#">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Features</a>
+                                        <a class="nav-link text-white" href="#">Features</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.php?pag=logout">Sair</a>
+                                        <a class="nav-link text-white" href="<?php echo $url_base?>/system/security/sair.php">Sair</a>
                                     </li>
                                 </ul>
                             </div>
